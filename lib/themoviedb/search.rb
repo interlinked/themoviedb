@@ -39,6 +39,8 @@ module Tmdb
         '/search/keyword'
       when 'find'
         '/find'
+      when 'multi'
+        '/search/multi'
       end
       self
     end
