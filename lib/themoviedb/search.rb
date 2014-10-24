@@ -57,7 +57,7 @@ module Tmdb
 
     #Sends back main data
     def fetch
-      fetch_response.results
+      fetch_response['results']
     end
 
     #Send back whole response
