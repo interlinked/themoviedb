@@ -78,5 +78,17 @@ module Tmdb
       search.fetch_response
     end
 
+    #Get the similar titles.
+    def self.similar(id, conditions={})
+      search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/similar")
+      search.fetch_response
+    end
+
+    #Get the keywords.
+    def self.keywords(id, conditions={})
+      search = Tmdb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/keywords")
+      search.fetch_response
+    end
+
   end
 end
